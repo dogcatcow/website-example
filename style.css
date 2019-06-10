@@ -152,15 +152,9 @@ a {
   width: 48%;
 }
 
-/*아래: 현재 메일링 클래스를 두곳에서 씀.
-두개의 div, 메일링 클래스 이름은 동일.
-이 경우 첫번째 자식 요소에만
-margin-right 속성 주고 싶으면
-:nth-child() , 즉 가상클래스 사용.*/
-
 .mailing:first-child {
   margin-right: 4%;
-} /*Cf. mailing 48%*/
+}
 
 .mailing-title {
   margin: 0 0 20px 0;
@@ -184,7 +178,7 @@ margin-right 속성 주고 싶으면
 
 .mailing-form {
   margin: 10px 0 30px;
-  position: relative;  /*(from step1)*/
+  position: relative;
 }
 
 .mailing-form > label {
@@ -192,42 +186,22 @@ margin-right 속성 주고 싶으면
   width: 1px;
   height: 1px;
   overflow: hidden;
-  background: grey;
   margin: -1px;
   clip: rect(0, 0, 0, 0);
 }
-/*일부러 width와 height를 1픽셀로 줘서
-  글씨를 흘러넘치게한 뒤,
-  흘러넘치는 부분을 감춤.
-  그러나 1픽셀 그레이네모 남음. 
-  /*
-  display: none;
-  visibility: hidden*/
-/*margin과 clip으로 1px 그레이네모없앰.*/
-/*The clip CSS property defines what portion of an element is visible.*/
-/*굳이 이런 처리 이유: 스크린 리더가 읽어야 함. ACCESSIBILITY*/
 
 input[type="email"] {
-    width: 100px;
-    border: 1px solid #cfe3dc;
-    /*인풋타입이 이메일인것만 선택?
-  background: grey;*/
-    border-radius: 4px;
-    height: 5rem;
-  }
-
-  /*인풋타입이 이메일인것만 선택?
-  background: grey;*/
+  background: grey;
+  width: 100px;
+  border: 1px solid #cfe3dc;
+  border-radius: 4px;
+  height: 5rem;
 }
-
 
 .mailing-form-btn {
-  position: absolute; /*rc: 어떤거 안에 위치...어느 부모요소 안에서, 그걸 기준으로 ~칸 이동하려면 abs 사용...이게 step1*/
-}  /*움직일 선택자abs 정했으면, 기준점인 rel 선택자로 가기. 부모요소 관련  mailing-form클래스 선택자 고름. (to) step2 */
-
-.input-following {
+  top: 0;
+  right: 0;
 }
-
 
 /*SIDE CONTENT*/
 
