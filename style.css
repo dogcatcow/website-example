@@ -178,7 +178,6 @@ a {
 
 .mailing-form {
   margin: 10px 0 30px;
-  position: relative;
 }
 
 .mailing-form > label {
@@ -192,15 +191,9 @@ a {
 
 input[type="email"] {
   background: grey;
-  width: 100px;
-  border: 1px solid #cfe3dc;
-  border-radius: 4px;
-  height: 5rem;
 }
 
 .mailing-form-btn {
-  top: 0;
-  right: 0;
 }
 
 /*SIDE CONTENT*/
