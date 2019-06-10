@@ -36,7 +36,7 @@ a {
 
 .container-float {
   max-width: 1400px;
-  background: red;
+  background: white;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
@@ -118,11 +118,61 @@ a {
   background: #51be95;
 }
 
+/*MAIN CONTENT*/
+
 .main-content {
-  background: pink;
   float: left;
   width: 70%;
+  padding-right: 20px;
 }
+
+.main-title {
+  font-weight: 400;
+  margin: 40px 0 20px 0;
+  font-size: 3.2rem;
+}
+
+.main-desc {
+  margin: 0;
+}
+
+.mailing-layout {
+  padding-top: 10px;
+}
+
+.mailing-layout::after {
+  /*가상요소 왜? 콘테이너 참조*/
+  content: "";
+  display: block;
+  clear: both; /*포지션과 플롯 때문에? NORMAL FLOW아니라서?*/
+}
+
+.mailing {
+  float: left;
+  width: 48%;
+  background: lime;
+}
+
+/*아래: 현재 메일링 클래스를 두곳에서 씀.
+두개의 div, 메일링 클래스 이름은 동일.
+이 경우 첫번째 자식 요소에만
+margin-right 속성 주고 싶으면
+:nth-child() , 즉 가상클래스 사용.*/
+
+.mailing:first-child {
+  margin-right: 4%;
+} /*Cf. mailing 48%*/
+
+.mailing-title {
+}
+
+.input-following {
+}
+
+.mailing-form-btn {
+}
+
+/*SIDE CONTENT*/
 
 .side-content {
   background: yellow;
